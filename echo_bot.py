@@ -18,7 +18,9 @@ bot = telebot.TeleBot(API_TOKEN)
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
     bot.reply_to(message, """\
-Hola !! soy solo un Bot, un Bot y nada mas. Si tienes dudas contacta a dL o marcot.\
+      Hola !! soy solo un Bot, un Bot y nada mas. \
+      /temp \
+      Si tienes dudas contacta a dL o marcot.\
 """)
 
 
