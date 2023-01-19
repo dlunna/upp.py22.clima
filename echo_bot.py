@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-# This is a simple echo bot using the decorator mechanism.
-# It echoes any incoming text messages.
+# This is a echo bot 
+# by dl
 
 import telebot
 import requests
@@ -9,21 +9,18 @@ import json
 import os
 import subprocess
 
-API_TOKEN = 'XXXX:YYYYY'
-
+API_TOKEN = '5608298475:AAFewDNlf0CxmuPVIiRn9Bjn146i6Yo7Shs'
 bot = telebot.TeleBot(API_TOKEN)
-
 
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
     bot.reply_to(message, """\
       Hola !! soy solo un Bot, un Bot y nada mas. \
-      /temp \
-      Si tienes dudas contacta a dL o marcot.\
+      Si tienes dudas contacta al depto de TIC's en UPP \
+      sistemas@upp.edu.mx\
+      7715477510 ext 2217.\
 """)
-
-
 
 def getBtc():
     try:
@@ -36,7 +33,6 @@ def getBtc():
 def temperatura():
     try:
       #response = os.system('ls')
-      
       timevar = subprocess.check_output('sensors')
       #print ('la temperatura es:' + timevar)
       return str(timevar)
@@ -60,6 +56,13 @@ def sentMessage(message):
       mensaje = 'Falla en la señal ...'
     bot.reply_to(message, mensaje)
 
+@bot.message_handler(commands=['saludo'])
+def sentMessage(message):
+    try:
+      mensaje = 'La temperatura es:' + temperatura()
+    except:
+      mensaje = 'Falla en la señal ...'
+    bot.reply_to(message, mensaje)
 
 
 
