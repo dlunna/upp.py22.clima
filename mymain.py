@@ -1,6 +1,9 @@
-from curses import echo
-from lib2to3.pgen2 import token
-from tkinter import Scale
+#pip install aiogram
+#pip install pyqrcode
+
+#from curses import echo
+#from lib2to3.pgen2 import token
+#from tkinter import Scale
 from aiogram import Bot, Dispatcher, executor, types
 import pyqrcode
 import mykey
