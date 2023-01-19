@@ -1,0 +1,7 @@
+/start - Inicio
+/help - Ayuda !!
+/programa - Programa del evento
+
+start - Inicio
+help - Ayuda !!
+programa - Programa del evento

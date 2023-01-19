@@ -1,5 +1,6 @@
-#pip install aiogram
-#pip install pyqrcode
+#pip install aiogram -> conectar con telegram
+#pip install pyqrcode -> generador de QR
+#pip install pypng -> imagenes qr
 
 #from curses import echo
 #from lib2to3.pgen2 import token
