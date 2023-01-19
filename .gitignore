@@ -3,3 +3,4 @@ venv/
 project/core/static/core/vendor/
 project/db.sqlite3
 project/media/
+mykey.py

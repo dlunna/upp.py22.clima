@@ -1,8 +1,17 @@
+from curses import echo
+from lib2to3.pgen2 import token
 from tkinter import Scale
 from aiogram import Bot, Dispatcher, executor, types
 import pyqrcode
+import mykey
 
-bot = Bot(token='5961465534:AAFUxL9xF8ZwxaTBGFE28r_WDrIyC7IELC4')
+#with open('key.txt') as f:
+#    lines = f.readlines()
+
+#bot = Bot(token= li'5961465534:AAFUxL9xF8ZwxaTBGFE28r_WDrIyC7IELC4')
+#bot = Bot(token= lines)
+echo = mykey.token
+bot = Bot(token = mykey.token)
 db = Dispatcher(bot)
 
 @db.message_handler(commands=['start'])
